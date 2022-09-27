@@ -1,17 +1,9 @@
-import { createContext, ReactElement, useState } from "react";
+import { createContext } from "react";
 
-interface ContextExampleType {
+export interface ContextExampleType {
   color: string;
 }
 
 const context = createContext<null | ContextExampleType>(null);
-const { Provider, Consumer } = context;
 
-const ContextExample = ({ children }: { children: ReactElement }) => {
-  const [exampleData, updataExampleData] = useState<ContextExampleType>({
-    color: "#red",
-  });
-  return <Provider value={exampleData}>{children}</Provider>;
-};
-
-export default ContextExample;
+export default context;
