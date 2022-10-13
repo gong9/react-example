@@ -7,9 +7,11 @@ import FuncCompRef from './example/forward-ref/function-comp-ref';
 //! example context
 import ProviderExam from './example/context/provider'
 
+import BatchHandle from './example/class-components';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-root.render(<ProviderExam/>);
+root.render(<BatchHandle/>);
 
